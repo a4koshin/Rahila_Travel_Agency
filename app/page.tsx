@@ -8,9 +8,9 @@ const HomePage = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           {/* Heading with gradient */}
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-7xl font-bold">
             Discover the{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
               World with Confidence
             </span>
           </h1>
@@ -23,13 +23,13 @@ const HomePage = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center items-center gap-2  pt-4">
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <div className="flex flex-wrap gap-2 lg:gap-6 pt-4">
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white  px-4 py-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all ">
               Explore Destinations
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-orange-200 text-orange-600 hover:bg-orange-50 px-8 py-6 rounded-xl transition-all"
+              className="border border-orange-200 text-amber-600 hover:bg-orange-50 px-8 py-6 rounded-xl hover:scale-105 transition-all"
             >
               Plan Your Trip
             </Button>
@@ -37,16 +37,15 @@ const HomePage = () => {
         </div>
 
         {/* Image with modern styling */}
-        <div className="relative">
+        <div className="relative group">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             <Image
               src="/hero.jpeg"
               alt="Beautiful travel destination"
               width={600}
               height={600}
               priority
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>
