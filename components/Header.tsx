@@ -41,13 +41,13 @@ const Header = () => {
               <Link
                 key={item.id}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-400 transition-colors duration-200 group"
+                className="relative px-4 py-2 text-sm font-medium text-gray-700 hover:text-amber-400 transition-colors duration-200 group"
               >
                 <span className="relative z-10">{item.name}</span>
-                <span className="absolute inset-x-3 bottom-1 h-0.5 bg-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+                <span className="absolute inset-x-3 bottom-1 h-0.5 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
               </Link>
             ))}
-            <Button className="bg-orange-400 hover:bg-orange-500">
+            <Button className="bg-amber-400 hover:bg-amber-500">
               Book your trip
             </Button>
           </nav>
@@ -56,7 +56,7 @@ const Header = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
-            className="lg:hidden p-2.5 rounded-xl bg-orange-50 text-blue-950 hover:bg-orange-100 transition-colors duration-200"
+            className="lg:hidden p-2.5 border border-amber-200 rounded-xl bg-orange-50 text-blue-950 hover:bg-orange-100 transition-colors duration-200"
           >
             {isOpen ? (
               <IoMdClose className="text-2xl" />
@@ -78,13 +78,13 @@ const Header = () => {
                 key={item.id}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-orange-400 hover:bg-orange-50 rounded-xl transition-all duration-200 group"
+                className="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-amber-400 hover:bg-orange-50 rounded-xl transition-all duration-200 group"
               >
                 <span className="ml-2">{item.name}</span>
               </Link>
             ))}
             <div className="px-4 pt-4 border-t border-gray-100">
-              <Button className="w-full px-6 py-3 bg-orange-400 text-white font-semibold text-sm rounded-xl hover:bg-orange-500 transition-all duration-300 shadow-md active:scale-95">
+              <Button className="w-full px-6 py-3 bg-amber-400 text-white font-semibold text-sm rounded-xl hover:bg-amber-500 transition-all duration-300 shadow-md active:scale-95">
                 Book Your Trip
               </Button>
             </div>
