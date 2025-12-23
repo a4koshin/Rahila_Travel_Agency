@@ -6,12 +6,13 @@ import Link from "next/link";
 import { navbar } from "@/lib/navigation";
 import { RiMenu5Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top bar */}
         <div className="flex h-20 items-center justify-between">
@@ -46,13 +47,16 @@ const Header = () => {
                 <span className="absolute inset-x-3 bottom-1 h-0.5 bg-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
               </Link>
             ))}
+            <Button className="bg-orange-400 hover:bg-orange-500">
+              Book your trip
+            </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
-            className="lg:hidden p-2.5 rounded-xl bg-blue-50 text-blue-950 hover:bg-blue-100 transition-colors duration-200"
+            className="lg:hidden p-2.5 rounded-xl bg-orange-50 text-blue-950 hover:bg-orange-100 transition-colors duration-200"
           >
             {isOpen ? (
               <IoMdClose className="text-xl" />
@@ -74,16 +78,15 @@ const Header = () => {
                 key={item.id}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 group"
+                className="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:text-orange-400 hover:bg-orange-50 rounded-xl transition-all duration-200 group"
               >
                 <span className="ml-2">{item.name}</span>
-                <div className="ml-auto w-1.5 h-1.5 rounded-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
             ))}
             <div className="px-4 pt-4 border-t border-gray-100">
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-sm rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md active:scale-95">
+              <Button className="w-full px-6 py-3 bg-orange-400 text-white font-semibold text-sm rounded-xl hover:bg-orange-500 transition-all duration-300 shadow-md active:scale-95">
                 Book Your Trip
-              </button>
+              </Button>
             </div>
           </nav>
         </div>
