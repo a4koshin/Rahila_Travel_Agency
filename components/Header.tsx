@@ -59,9 +59,9 @@ const Header = () => {
             className="lg:hidden p-2.5 rounded-xl bg-orange-50 text-blue-950 hover:bg-orange-100 transition-colors duration-200"
           >
             {isOpen ? (
-              <IoMdClose className="text-xl" />
+              <IoMdClose className="text-2xl" />
             ) : (
-              <RiMenu5Line className="text-xl" />
+              <RiMenu5Line className="text-2xl" />
             )}
           </button>
         </div>
