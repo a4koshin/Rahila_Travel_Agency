@@ -7,9 +7,10 @@ import { navbar } from "@/lib/navigation";
 import { RiMenu5Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { Button } from "./ui/button";
-
+import { useRouter } from "next/navigation";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/10 backdrop-blur-xl  border-b border-gray-100">
@@ -47,7 +48,10 @@ const Header = () => {
                 <span className="absolute inset-x-3 bottom-1 h-0.5 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
               </Link>
             ))}
-            <Button className="bg-amber-400 hover:bg-amber-500">
+            <Button
+              onClick={() => router.push("/contact")}
+              className="bg-amber-400 hover:bg-amber-500"
+            >
               Book your trip
             </Button>
           </nav>
