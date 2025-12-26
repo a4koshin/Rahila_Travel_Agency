@@ -52,13 +52,13 @@ const AboutPage = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative group">
               <div className="aspect-square relative rounded-lg overflow-hidden border border-gray-200">
                 <Image
                   src="/office.png"
                   alt="Rahila Travel"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transform transition-all"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
@@ -233,7 +233,7 @@ const AboutPage = () => {
               oss upptäcka världen – en resa i taget.
             </p>
             <div className="inline-flex flex-col sm:flex-row items-center gap-4">
-              <div className="bg-white text-blue-950 px-6 py-3 rounded-lg font-semibold">
+              <div className="bg-white text-blue-950 px-6 py-2 rounded-lg font-semibold">
                 📞 Kontakta oss idag
               </div>
               <p className="text-white/80 text-sm">
