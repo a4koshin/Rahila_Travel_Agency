@@ -88,7 +88,10 @@ const Header = () => {
               </Link>
             ))}
             <div className="px-4 pt-4 border-t border-gray-100">
-              <Button className="w-full px-6 py-3 bg-amber-400 text-white font-semibold text-sm rounded-xl hover:bg-amber-500 transition-all duration-300 shadow-md active:scale-95">
+              <Button
+                onClick={() => router.push("/contact")}
+                className="w-full px-6 py-3 bg-amber-400 text-white font-semibold text-sm rounded-xl hover:bg-amber-500 transition-all duration-300 shadow-md active:scale-95"
+              >
                 Book Your Trip
               </Button>
             </div>
