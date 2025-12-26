@@ -15,21 +15,20 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Minimal Header */}
-      <div className="border-b border-gray-100">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-6">
-              Din resa börjar här
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              På Rahila Travel förvandlar vi resedrömmar till verklighet med
-              personlig service och expertkunskap.
-            </p>
-          </div>
+      <div className="py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 tracking-tight mb-6">
+            Din resa börjar här
+          </h1>
+          <div className="w-16 h-0.5 bg-blue-500 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            På Rahila Travel förvandlar vi resedrömmar till verklighet med
+            personlig service och expertkunskap.
+          </p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         {/* Introduction */}
         <div className="mb-24">
           <div className="grid md:grid-cols-2 gap-16 items-center">
