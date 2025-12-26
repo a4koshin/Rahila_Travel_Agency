@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="space-y-6">
           {/* Heading with gradient */}
           <h1 className="text-4xl md:text-7xl font-bold">
-            Discover the{" "}
+            <span className="text-blue-950">Discover the </span>
             <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
               World with Confidence
             </span>
