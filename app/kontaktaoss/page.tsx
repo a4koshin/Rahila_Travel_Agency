@@ -10,7 +10,7 @@ type FormErrors = {
   message?: string;
 };
 
-const PHONE_NUMBER = "+44 7777 661116";
+const PHONE_NUMBER = "+46 73 663 30 55";
 
 const ContactPage = () => {
   const [name, setName] = useState<string>("");
