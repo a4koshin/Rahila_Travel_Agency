@@ -90,8 +90,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-gray-100 mt-1 flex-shrink-0" />
                 <span className="text-blue-100 text-sm">
-                  Underhaugsgata
-                  {/* <br /> */} 3, 1607 Fredrikstad
+                  {" "}
+                  brahegatan 2 , 41514 gothenburg sweden{/* <br /> */}
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -100,16 +100,16 @@ const Footer = () => {
                   href="tel:+4712345678"
                   className="text-blue-100 hover:text-white transition-colors text-sm"
                 >
-                  + 47 484 60 886
+                  + 0000000000
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="w-5 h-5 text-gray-100 flex-shrink-0" />
                 <a
-                  href="mailto:innvandrerforumiostfold@gmail.com"
+                  href="mailto:agent@rahilatravel.com"
                   className="text-blue-100 hover:text-white transition-colors text-sm break-all"
                 >
-                  innvandrerforumiostfold@gmail.com
+                  agent@rahilatravel.com
                 </a>
               </div>
             </div>
