@@ -1,13 +1,10 @@
 import React from "react";
 import {
   FaFacebook,
-  FaTwitter,
   FaInstagram,
-  FaLinkedin,
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
-  FaArrowRight,
 } from "react-icons/fa";
 import { navbar } from "@/lib/navigation";
 import Image from "next/image";
@@ -45,7 +42,7 @@ const Footer = () => {
 
             <div className="flex space-x-4 pt-4">
               <a
-                href="https://www.facebook.com/InnvandreriOstfold"
+                // href="https://www.facebook.com/InnvandreriOstfold"
                 className="p-2 bg-blue-900 rounded-lg hover:bg-blue-100 transition-colors hover:text-blue-950"
                 aria-label="Facebook"
               >
@@ -53,7 +50,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/innvandrerforumostfold/"
+                // href="https://www.instagram.com/innvandrerforumostfold/"
                 className="p-2 bg-blue-900 rounded-lg hover:bg-blue-100 transition-colors hover:text-blue-950"
                 aria-label="Instagram"
               >
