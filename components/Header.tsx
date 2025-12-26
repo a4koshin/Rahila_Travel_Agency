@@ -8,6 +8,7 @@ import { RiMenu5Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { Flashlight } from "lucide-react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -89,7 +90,10 @@ const Header = () => {
             ))}
             <div className="px-4 pt-4 border-t border-gray-100">
               <Button
-                onClick={() => router.push("/contact")}
+                onClick={() => {
+                  setIsOpen(false);
+                  () => router.push("/contact");
+                }}
                 className="w-full px-6 py-3 bg-amber-400 text-white font-semibold text-sm rounded-xl hover:bg-amber-500 transition-all duration-300 shadow-md active:scale-95"
               >
                 Book Your Trip
