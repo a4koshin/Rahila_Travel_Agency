@@ -87,18 +87,18 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
       // Create email content
       const subject = `New Travel Booking Request from ${formData.name}`;
       const body = `
-New Travel Booking Request:
--------------------------
-Name: ${formData.name}
-Email: ${formData.email}
-Travel Dates: ${formattedFromDate} to ${formattedToDate}
-Message: ${formData.message}
--------------------------
-Submitted: ${new Date().toLocaleString()}
+      New Travel Booking Request:
+      -------------------------
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Travel Dates: ${formattedFromDate} to ${formattedToDate}
+      Message: ${formData.message}
+      -------------------------
+      Submitted: ${new Date().toLocaleString()}
       `;
 
       // Create mailto link
-      const mailtoLink = `mailto:mankajr11@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:micraajismaaciil18@gmail.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
