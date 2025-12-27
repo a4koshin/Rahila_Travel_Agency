@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <div className="relative w-16 h-16 flex-shrink-0">
                 <Image
-                  src="/logo.png"
+                  src="/logoFooter.png"
                   alt="logo"
                   fill
                   priority
