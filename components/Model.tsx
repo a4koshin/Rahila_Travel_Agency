@@ -297,7 +297,7 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
                 <textarea
                   name="message"
                   placeholder="Tell us about your travel plans..."
-                  rows="2"
+                  rows={2}
                   className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition-all resize-none text-sm"
                   value={formData.message}
                   onChange={handleChange}
