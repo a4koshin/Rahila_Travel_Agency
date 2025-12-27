@@ -136,7 +136,7 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
     setSubmitStatus("idle");
 
     try {
-      // Format dates for better display
+      // Format dates
       const formattedFromDate = formData.fromDate
         ? new Date(formData.fromDate).toLocaleDateString("en-US", {
             weekday: "long",
@@ -155,7 +155,7 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
           })
         : "Not specified";
 
-      // Create email content
+      // Email content
       const subject = `New Travel Booking Request from ${formData.name}`;
       const body = `
 New Travel Booking Request
@@ -168,18 +168,28 @@ Message: ${formData.message}
 Submitted: ${new Date().toLocaleString()}
     `;
 
-      // ✅ Gmail compose link (opens Gmail web / app)
-      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=micraajismaaciil18@gmail.com&su=${encodeURIComponent(
+      // 🔹 Gmail APP (Android – best effort)
+      const gmailAppLink = `googlegmail://co?to=micraajismaaciil18@gmail.com&subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
-      // Open Gmail
-      window.open(gmailLink, "_blank");
+      // 🔹 Gmail WEB (fallback)
+      const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=micraajismaaciil18@gmail.com&su=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
 
-      // Show success state
+      // Try Gmail App first
+      window.location.href = gmailAppLink;
+
+      // Fallback to Gmail Web
+      setTimeout(() => {
+        window.open(gmailWebLink, "_blank");
+      }, 500);
+
+      // Success UI
       setSubmitStatus("success");
 
-      // Clear form fields
+      // Clear form
       setFormData({
         name: "",
         email: "",
@@ -188,7 +198,7 @@ Submitted: ${new Date().toLocaleString()}
         message: "",
       });
 
-      // Close modal after 2 seconds
+      // Auto close
       setTimeout(() => {
         onClose();
         setSubmitStatus("idle");
