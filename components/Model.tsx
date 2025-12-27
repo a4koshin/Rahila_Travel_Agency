@@ -59,6 +59,77 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitStatus("idle");
+
+  //   try {
+  //     // Format dates for better display
+  //     const formattedFromDate = formData.fromDate
+  //       ? new Date(formData.fromDate).toLocaleDateString("en-US", {
+  //           weekday: "long",
+  //           year: "numeric",
+  //           month: "long",
+  //           day: "numeric",
+  //         })
+  //       : "Not specified";
+
+  //     const formattedToDate = formData.toDate
+  //       ? new Date(formData.toDate).toLocaleDateString("en-US", {
+  //           weekday: "long",
+  //           year: "numeric",
+  //           month: "long",
+  //           day: "numeric",
+  //         })
+  //       : "Not specified";
+
+  //     // Create email content
+  //     const subject = `New Travel Booking Request from ${formData.name}`;
+  //     const body = `
+  //     New Travel Booking Request:
+  //     -------------------------
+  //     Name: ${formData.name}
+  //     Email: ${formData.email}
+  //     Travel Dates: ${formattedFromDate} to ${formattedToDate}
+  //     Message: ${formData.message}
+  //     -------------------------
+  //     Submitted: ${new Date().toLocaleString()}
+  //     `;
+
+  //     // Create mailto link
+  //     const mailtoLink = `mailto:micraajismaaciil18@gmail.com?subject=${encodeURIComponent(
+  //       subject
+  //     )}&body=${encodeURIComponent(body)}`;
+
+  //     // Open email client
+  //     window.open(mailtoLink, "_blank");
+
+  //     // Show success state
+  //     setSubmitStatus("success");
+
+  //     // Clear form fields
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       fromDate: "",
+  //       toDate: "",
+  //       message: "",
+  //     });
+
+  //     // Close modal after 2 seconds
+  //     setTimeout(() => {
+  //       onClose();
+  //       setSubmitStatus("idle");
+  //     }, 2000);
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     setSubmitStatus("error");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -87,23 +158,23 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
       // Create email content
       const subject = `New Travel Booking Request from ${formData.name}`;
       const body = `
-      New Travel Booking Request:
-      -------------------------
-      Name: ${formData.name}
-      Email: ${formData.email}
-      Travel Dates: ${formattedFromDate} to ${formattedToDate}
-      Message: ${formData.message}
-      -------------------------
-      Submitted: ${new Date().toLocaleString()}
-      `;
+New Travel Booking Request
+-------------------------
+Name: ${formData.name}
+Email: ${formData.email}
+Travel Dates: ${formattedFromDate} to ${formattedToDate}
+Message: ${formData.message}
+-------------------------
+Submitted: ${new Date().toLocaleString()}
+    `;
 
-      // Create mailto link
-      const mailtoLink = `mailto:micraajismaaciil18@gmail.com?subject=${encodeURIComponent(
+      // ✅ Gmail compose link (opens Gmail web / app)
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=micraajismaaciil18@gmail.com&su=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
-      // Open email client
-      window.open(mailtoLink, "_blank");
+      // Open Gmail
+      window.open(gmailLink, "_blank");
 
       // Show success state
       setSubmitStatus("success");
