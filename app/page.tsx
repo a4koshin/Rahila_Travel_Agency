@@ -1,11 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import React from "react";
-import { useState } from "react";
 import Image from "next/image";
 import { services } from "@/lib/Services";
 import ServiceCard from "@/components/ServiceCard";
-import { Model } from "@/components/Model";
 import { useRouter } from "next/navigation";
 const HomePage = () => {
   // const [isOpen, setIsOpen] = useState(false);
