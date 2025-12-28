@@ -12,9 +12,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
 }) => {
   return (
-    <div className="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg">
+    <div className="group flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:border-2 hover:border-blue-100 hover:shadow-lg">
       {/* Image */}
-      <div className="relative h-48 w-full">
+      <div className="relative h-48 w-full overflow-hidden">
         <Image
           src={image}
           alt={title}
@@ -24,9 +24,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="flex flex-1 flex-col p-6">
         <h3 className="mb-2 text-lg font-semibold text-blue-900">{title}</h3>
-        <p className="text-sm leading-relaxed text-gray-600">{description}</p>
+
+        <p className="mb-6 text-sm leading-relaxed text-gray-600">
+          {description}
+        </p>
+
+        {/* Button */}
+        <button className="mt-auto inline-flex items-center justify-center rounded-md border border-blue-900 px-4 py-2 text-sm font-medium text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white">
+          Contact Us
+        </button>
       </div>
     </div>
   );
