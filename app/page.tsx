@@ -288,15 +288,15 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl text-white">
-              <p className="text-lg font-semibold">
+            <div className="mt-8 p-6 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl text-center text-white">
+              <p className="text-md lg:text-xl font-semibold">
                 Ready to start your journey?
               </p>
               <button
                 onClick={() => router.push("/kontaktaoss")}
-                className="mt-4 bg-white text-amber-600 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 hover-scale-105 transition"
+                className="mt-4 bg-white text-amber-600 font-bold px-8 py-2 lg:px-6 lg:py-3 rounded-lg hover:bg-gray-100 hover-scale-105 transition"
               >
-                Get Free Consultation
+                <span className="text-sm">Get Free Consultation</span>
               </button>
             </div>
           </div>
