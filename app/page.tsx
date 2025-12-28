@@ -36,7 +36,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-4 -mt-22">
+        <div className="flex items-center justify-center gap-4 lg:-mt-22">
           <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 rounded-xl shadow-lg hover:scale-105 transition-all">
             Explore Destinations
           </Button>
