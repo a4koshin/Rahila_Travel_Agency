@@ -66,6 +66,9 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* who we are */}
+      <div className="py-16 px-4 md:px-8"></div>
+
       {/* Quick Services Section */}
 
       <div className="py-16 px-4 md:px-8">
