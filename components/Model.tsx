@@ -62,6 +62,87 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setSubmitStatus("idle");
+
+  //   try {
+  //     // Format dates
+  //     const formattedFromDate = formData.fromDate
+  //       ? new Date(formData.fromDate).toLocaleDateString("en-US", {
+  //           weekday: "long",
+  //           year: "numeric",
+  //           month: "long",
+  //           day: "numeric",
+  //         })
+  //       : "Not specified";
+
+  //     const formattedToDate = formData.toDate
+  //       ? new Date(formData.toDate).toLocaleDateString("en-US", {
+  //           weekday: "long",
+  //           year: "numeric",
+  //           month: "long",
+  //           day: "numeric",
+  //         })
+  //       : "Not specified";
+
+  //     // Email content
+  //     const subject = `New Travel Booking Request from ${formData.name}`;
+  //     const body = `
+  //     New Travel Booking Request
+  //     -------------------------
+  //     Name: ${formData.name}
+  //     Email: ${formData.email}
+  //     Travel Dates: ${formattedFromDate} to ${formattedToDate}
+  //     Message: ${formData.message}
+  //     -------------------------
+  //     Submitted: ${new Date().toLocaleString()}
+  //   `;
+
+  //     // 🔹 Gmail APP (Android – best effort)
+  //     const gmailAppLink = `googlegmail://co?to=mohamed.hass.dev@gmail.com.com&subject=${encodeURIComponent(
+  //       subject
+  //     )}&body=${encodeURIComponent(body)}`;
+
+  //     // 🔹 Gmail WEB (fallback)
+  //     const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.hass.dev@gmail.com.com&su=${encodeURIComponent(
+  //       subject
+  //     )}&body=${encodeURIComponent(body)}`;
+
+  //     // Try Gmail App first
+  //     window.location.href = gmailAppLink;
+
+  //     // Fallback to Gmail Web
+  //     setTimeout(() => {
+  //       window.open(gmailWebLink, "_blank");
+  //     }, 500);
+
+  //     // Success UI
+  //     setSubmitStatus("success");
+
+  //     // Clear form
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       fromDate: "",
+  //       toDate: "",
+  //       message: "",
+  //     });
+
+  //     // Auto close
+  //     setTimeout(() => {
+  //       onClose();
+  //       setSubmitStatus("idle");
+  //     }, 2000);
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     setSubmitStatus("error");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -90,35 +171,46 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
       // Email content
       const subject = `New Travel Booking Request from ${formData.name}`;
       const body = `
-      New Travel Booking Request
-      -------------------------
-      Name: ${formData.name}
-      Email: ${formData.email}
-      Travel Dates: ${formattedFromDate} to ${formattedToDate}
-      Message: ${formData.message}
-      -------------------------
-      Submitted: ${new Date().toLocaleString()}
-    `;
+New Travel Booking Request
+-------------------------
+Name: ${formData.name}
+Email: ${formData.email}
+Travel Dates: ${formattedFromDate} to ${formattedToDate}
+Message: ${formData.message}
+-------------------------
+Submitted: ${new Date().toLocaleString()}
+    `.trim();
 
-      // 🔹 Gmail APP (Android – best effort)
-      const gmailAppLink = `googlegmail://co?to=mohamed.hass.dev@gmail.com.com&subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
+      const to = "mohamed.hass.dev@gmail.com";
 
-      // 🔹 Gmail WEB (fallback)
-      const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.hass.dev@gmail.com.com&su=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
+      const encodedSubject = encodeURIComponent(subject);
+      const encodedBody = encodeURIComponent(body);
 
-      // Try Gmail App first
-      window.location.href = gmailAppLink;
+      // Gmail URLs
+      const gmailAppLink = `googlegmail://co?to=${to}&subject=${encodedSubject}&body=${encodedBody}`;
+      const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&subject=${encodedSubject}&body=${encodedBody}`;
 
-      // Fallback to Gmail Web
-      setTimeout(() => {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        // Desktop → Gmail Web only
         window.open(gmailWebLink, "_blank");
-      }, 500);
+      } else {
+        // Mobile → Try app first, fallback to web
+        const start = Date.now();
+        window.location.href = gmailAppLink;
 
-      // Success UI
+        setTimeout(() => {
+          const elapsed = Date.now() - start;
+
+          // If still on page, app didn't open
+          if (elapsed < 2000) {
+            window.location.href = gmailWebLink;
+          }
+        }, 1500);
+      }
+
+      // UI success
       setSubmitStatus("success");
 
       // Clear form
