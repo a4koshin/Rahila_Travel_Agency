@@ -1,8 +1,16 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import React from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { quickServices } from "@/lib/quickServices";
+import { Model } from "@/components/Model";
+import { useRouter } from "next/navigation";
 const HomePage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isModelOpen, setIsModelOpen] = useState(false);
+  const router = useRouter();
+
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
       <div className="grid grid-cols-1 gap-12 items-center">
@@ -76,7 +84,7 @@ const HomePage = () => {
           {quickServices.map((service) => (
             <div
               key={service.id}
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-amber-100"
+              className="group relative bg-white rounded-2xl  transition-all duration-300 overflow-hidden border border-gray-100 hover:border-amber-100"
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
@@ -164,7 +172,13 @@ const HomePage = () => {
                 </p>
 
                 {/* Action Button */}
-                <button className="group/btn w-full bg-gradient-to-r from-amber-50 to-amber-100 text-amber-700 font-semibold py-3 px-4 rounded-xl hover:from-amber-100 hover:to-amber-200 transition-all duration-300 flex items-center justify-center gap-2">
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsModelOpen(true); // This was missing!
+                  }}
+                  className="group/btn w-full bg-gradient-to-r from-amber-50 to-amber-100 text-amber-700 font-semibold py-3 px-4 rounded-xl hover:from-amber-100 hover:to-amber-200 transition-all duration-300 flex items-center justify-center gap-2"
+                >
                   <span>Book Service</span>
                   <svg
                     className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
@@ -194,6 +208,103 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+
+      {/* WHy choose us */}
+
+      <div className="py-16 px-4 md:px-8">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-950 mb-3">
+            Why Choose Us
+          </h1>
+          <p className="font-medium text-lg text-amber-600">
+            Fast, reliable solutions for all your travel needs
+          </p>
+          <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
+        </div>
+
+        {/* Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <h2 className="font-bold text-3xl text-blue-950 mb-8">
+              Your Trusted Travel Partner
+            </h2>
+
+            {[
+              {
+                icon: "✓",
+                title: "Best Price Guarantee",
+                desc: "We promise the lowest fares for flights and visa services",
+              },
+              {
+                icon: "⚡",
+                title: "Fast Processing",
+                desc: "Quick visa approvals and instant flight ticket confirmation",
+              },
+              {
+                icon: "🛡️",
+                title: "100% Secure",
+                desc: "Your documents and payments are completely protected",
+              },
+              {
+                icon: "👨‍💼",
+                title: "Expert Support",
+                desc: "24/7 assistance from travel professionals",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl text-blue-950 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column - Stats */}
+          <div className="bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-8 lg:p-12">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div className="text-4xl font-bold text-blue-950">5000+</div>
+                <div className="text-gray-600 mt-2">Visas Processed</div>
+              </div>
+              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div className="text-4xl font-bold text-amber-600">98%</div>
+                <div className="text-gray-600 mt-2">Success Rate</div>
+              </div>
+              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div className="text-4xl font-bold text-blue-950">24/7</div>
+                <div className="text-gray-600 mt-2">Support Available</div>
+              </div>
+              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
+                <div className="text-4xl font-bold text-amber-600">50+</div>
+                <div className="text-gray-600 mt-2">Countries Covered</div>
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl text-white">
+              <p className="text-lg font-semibold">
+                Ready to start your journey?
+              </p>
+              <button
+                onClick={() => router.push("/kontaktaoss")}
+                className="mt-4 bg-white text-amber-600 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 hover-scale-105 transition"
+              >
+                Get Free Consultation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Render the Model component */}
+      <Model isOpen={isModelOpen} onClose={() => setIsModelOpen(false)} />
     </div>
   );
 };
