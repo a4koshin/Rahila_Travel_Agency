@@ -8,8 +8,8 @@ import ServiceCard from "@/components/ServiceCard";
 import { Model } from "@/components/Model";
 import { useRouter } from "next/navigation";
 const HomePage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isModelOpen, setIsModelOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [isModelOpen, setIsModelOpen] = useState(false);
   const router = useRouter();
 
   return (
@@ -321,7 +321,7 @@ const HomePage = () => {
       </div>
 
       {/* Render the Model component */}
-      <Model isOpen={isModelOpen} onClose={() => setIsModelOpen(false)} />
+      {/* <Model isOpen={isModelOpen} onClose={() => setIsModelOpen(false)} /> */}
     </div>
   );
 };
