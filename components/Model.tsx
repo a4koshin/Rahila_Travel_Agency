@@ -181,7 +181,7 @@ Message: ${formData.message}
 Submitted: ${new Date().toLocaleString()}
     `.trim();
 
-      const to = "mohamed.hass.dev@gmail.com";
+      const to = "agent@rahilatravel.com";
 
       const encodedSubject = encodeURIComponent(subject);
       const encodedBody = encodeURIComponent(body);
