@@ -1,53 +1,197 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import Image from "next/image";
-
+import { quickServices } from "@/lib/quickServices";
 const HomePage = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          {/* Heading with gradient */}
-          <h1 className="text-4xl md:text-7xl font-bold">
-            <span className="text-blue-950">Discover the </span>
+      <div className="grid grid-cols-1 gap-12 items-center">
+        {/* TEXT SECTION (TOP) */}
+        <div className="space-y-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold">
+            <span className="text-blue-950"> Flight Tickets </span> <br />
             <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
-              World with Confidence
+              Visa Services You Can Trust
             </span>
           </h1>
-
-          {/* Description */}
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Plan unforgettable journeys tailored just for you. From breathtaking
-            destinations to seamless travel experiences, we take care of every
-            detail so you can travel stress-free and focus on making memories.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-2 lg:gap-6 pt-4">
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white  px-4 py-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all ">
-              Explore Destinations
-            </Button>
-            <Button
-              variant="outline"
-              className="border border-orange-200 text-amber-600 hover:bg-orange-50 px-8 py-6 rounded-xl hover:scale-105 transition-all"
-            >
-              Plan Your Trip
-            </Button>
+        </div>
+        {/* IMAGE SECTION */}
+        <div className="relative flex justify-center">
+          <div className="relative w-full max-w-7xl overflow-hidden rounded-[140px] aspect-[18/7]">
+            <Image
+              src="/hero22.png"
+              alt="Beautiful travel destination"
+              fill
+              priority
+              className="object-cover object-center"
+            />
           </div>
         </div>
 
-        {/* Image with modern styling */}
-        <div className="relative group">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <Image
-              src="/hero.jpeg"
-              alt="Beautiful travel destination"
-              width={600}
-              height={600}
-              priority
-              className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
+        <div className="flex items-center justify-center gap-4 -mt-22">
+          <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+            Explore Destinations
+          </Button>
+
+          <Button
+            variant="outline"
+            className="border border-orange-200 text-amber-600 hover:bg-orange-50 px-8 py-6 rounded-xl hover:scale-105 transition-all"
+          >
+            Plan Your Trip
+          </Button>
+        </div>
+        <div className="w-full text-center ">
+          <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
+            <svg
+              className="w-4 h-4 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+            Trusted by 10,000+ travelers worldwide
+          </p>
+        </div>
+      </div>
+
+      {/* Quick Services Section */}
+      <div className="py-16 px-4 md:px-8">
+        {/* Heading */}
+        <div className="flex flex-col text-center mb-12">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-950 mb-3">
+            Quick Services
+          </h1>
+          <p className="font-medium text-lg text-amber-600">
+            Fast, reliable solutions for all your travel needs
+          </p>
+          <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {quickServices.map((service) => (
+            <div
+              key={service.id}
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-amber-100"
+            >
+              {/* Image Container */}
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={service.img}
+                  alt={service.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  priority={service.id === 0}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                {/* Price Badge */}
+                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <span className="font-bold text-amber-700 text-lg">
+                    ${service.price}
+                  </span>
+                  <span className="text-gray-500 text-sm ml-1">
+                    {service.id === 2 ? "package" : "starting"}
+                  </span>
+                </div>
+              </div>
+
+              {/* Content Container */}
+              <div className="p-6">
+                {/* Service Icon/Emoji */}
+                <div className="mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {service.id === 0 && (
+                      <svg
+                        className="w-6 h-6 text-amber-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"
+                        />
+                      </svg>
+                    )}
+                    {service.id === 1 && (
+                      <svg
+                        className="w-6 h-6 text-amber-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    )}
+                    {service.id === 2 && (
+                      <svg
+                        className="w-6 h-6 text-amber-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                        />
+                      </svg>
+                    )}
+                  </div>
+                </div>
+
+                {/* Service Name */}
+                <h3 className="text-xl font-bold text-blue-950 mb-3 group-hover:text-amber-700 transition-colors duration-300">
+                  {service.name}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* Action Button */}
+                <button className="group/btn w-full bg-gradient-to-r from-amber-50 to-amber-100 text-amber-700 font-semibold py-3 px-4 rounded-xl hover:from-amber-100 hover:to-amber-200 transition-all duration-300 flex items-center justify-center gap-2">
+                  <span>Book Service</span>
+                  <svg
+                    className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </button>
+
+                {/* Popular Tag for First Service */}
+                {service.id === 0 && (
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      MOST POPULAR
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
