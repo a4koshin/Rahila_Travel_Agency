@@ -13,7 +13,6 @@ import {
 type ModelProps = {
   isOpen: boolean;
   onClose: () => void;
-  email: string;
 };
 
 export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
@@ -31,7 +30,7 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
   >("idle");
 
   // const email = "agent@rahilatravel.com";
-  const email = "mohamed.hass.dev@gmail.com";
+  // const email = "mohamed.hass.dev@gmail.com";
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -102,7 +101,7 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
     `;
 
       // 🔹 Gmail APP (Android – best effort)
-      const gmailAppLink = `googlegmail://co?to=${email}.com&subject=${encodeURIComponent(
+      const gmailAppLink = `googlegmail://co?to=mohamed.hass.dev@gmail.com.com&subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
