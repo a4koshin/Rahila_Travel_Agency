@@ -4,7 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 const ServicePage = () => {
   return (
     <div>
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-8 py-16 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 max-w-2xl">
           <h2 className="mb-4 text-3xl font-bold text-blue-900">
