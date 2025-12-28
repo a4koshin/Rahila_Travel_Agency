@@ -66,8 +66,112 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* who we are */}
-      <div className="py-16 px-4 md:px-8"></div>
+      {/* Who We Are */}
+      <div className="py-16 px-4 md:px-8 lg:px-12">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-950 mb-4">
+            Who We Are
+          </h1>
+          <p className="font-medium text-lg text-amber-600 max-w-2xl mx-auto">
+            Your trusted partner for seamless travel experiences worldwide
+          </p>
+          <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 max-w-7xl mx-auto text-base">
+          {/* Image Section */}
+          <div className="lg:w-1/2">
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-blue-600 rounded-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <Image
+                  src="/dubia.jpeg"
+                  alt="Our team providing excellent travel services"
+                  width={600}
+                  height={600}
+                  priority
+                  className="w-full h-auto object-cover aspect-square group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent">
+                  <p className="text-white font-medium text-lg">
+                    10+ Years of Excellence
+                  </p>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-white p-6 rounded-2xl shadow-xl">
+                <div className="text-3xl font-bold text-amber-600">5000+</div>
+                <div className="text-blue-950 font-medium">Happy Travelers</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Text Section */}
+          <div className="lg:w-1/2 space-y-6">
+            <h2 className="text-3xl font-bold text-blue-950">
+              Your Journey, Our Commitment
+            </h2>
+
+            <div className="space-y-4 text-gray-700">
+              <p className="text-lg leading-relaxed">
+                We are a dedicated team of travel experts passionate about
+                making your journey unforgettable. With over a decade of
+                experience, we specialize in providing comprehensive travel
+                solutions including flight bookings, visa processing, and
+                personalized travel planning.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Our mission is to simplify travel by offering reliable,
+                transparent, and cost-effective services. We understand that
+                every journey is unique, which is why we tailor our services to
+                meet your specific needs and preferences.
+              </p>
+            </div>
+
+            {/* Key Points */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+              {[
+                { icon: "✓", text: "Expert Travel Consultants" },
+                { icon: "✓", text: "24/7 Customer Support" },
+                { icon: "✓", text: "Best Price Guarantee" },
+                { icon: "✓", text: "100% Visa Success Rate" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+                    <span className="text-amber-600 font-bold">
+                      {item.icon}
+                    </span>
+                  </div>
+                  <span className="text-blue-950 font-medium">{item.text}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="pt-6">
+              <Button className="group bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-6 rounded-xl text-lg font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <span className="flex items-center gap-2">
+                  Learn More About Us
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Quick Services Section */}
 
