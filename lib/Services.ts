@@ -3,6 +3,7 @@ export interface Service {
   image: string;
   title: string;
   description: string;
+  price: number;
 }
 
 export const services: Service[] = [
@@ -12,6 +13,7 @@ export const services: Service[] = [
     title: "Travel Planning & Booking",
     description:
       "Professional and tailored travel planning and booking services for individuals and companies, ensuring safe and efficient journeys.",
+    price: 499.99,
   },
   {
     id: 2,
@@ -19,6 +21,7 @@ export const services: Service[] = [
     title: "Flight Ticket Services",
     description:
       "Competitive airline ticket solutions with flexible options for both personal and corporate travel needs.",
+    price: 699.99,
   },
   {
     id: 3,
@@ -26,6 +29,7 @@ export const services: Service[] = [
     title: "Visa Management (eVisa, ETA, ESTA)",
     description:
       "Expert visa consultation and processing for destinations requiring eVisa, ETA, or ESTA approvals.",
+    price: 899.99,
   },
   {
     id: 4,
@@ -33,5 +37,6 @@ export const services: Service[] = [
     title: "Travel Support & Assistance",
     description:
       "Fast and accessible customer support before, during, and after travel to ensure a seamless experience.",
+    price: 1099.99,
   },
 ];
