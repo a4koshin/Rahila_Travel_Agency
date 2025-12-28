@@ -5,6 +5,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { quickServices } from "@/lib/quickServices";
 import { Model } from "@/components/Model";
+import { services } from "@/lib/Services";
+import ServiceCard from "@/components/ServiceCard";
 import { useRouter } from "next/navigation";
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -186,133 +188,16 @@ const HomePage = () => {
           </p>
           <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {quickServices.map((service) => (
-            <div
+        {/* Grid */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => (
+            <ServiceCard
               key={service.id}
-              className="group relative bg-white rounded-2xl  transition-all duration-300 overflow-hidden border border-gray-100 hover:border-amber-100"
-            >
-              {/* Image Container */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={service.img}
-                  alt={service.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  priority={service.id === 0}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                {/* Price Badge */}
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                  <span className="font-bold text-amber-700 text-lg">
-                    ${service.price}
-                  </span>
-                  <span className="text-gray-500 text-sm ml-1">
-                    {service.id === 2 ? "package" : "starting"}
-                  </span>
-                </div>
-              </div>
-
-              {/* Content Container */}
-              <div className="p-6">
-                {/* Service Icon/Emoji */}
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {service.id === 0 && (
-                      <svg
-                        className="w-6 h-6 text-amber-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4 4 0 003 15z"
-                        />
-                      </svg>
-                    )}
-                    {service.id === 1 && (
-                      <svg
-                        className="w-6 h-6 text-amber-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                    )}
-                    {service.id === 2 && (
-                      <svg
-                        className="w-6 h-6 text-amber-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                        />
-                      </svg>
-                    )}
-                  </div>
-                </div>
-
-                {/* Service Name */}
-                <h3 className="text-xl font-bold text-blue-950 mb-3 group-hover:text-amber-700 transition-colors duration-300">
-                  {service.name}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Action Button */}
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    setIsModelOpen(true); // This was missing!
-                  }}
-                  className="group/btn w-full bg-gradient-to-r from-amber-50 to-amber-100 text-amber-700 font-semibold py-3 px-4 rounded-xl hover:from-amber-100 hover:to-amber-200 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  <span>Book Service</span>
-                  <svg
-                    className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </button>
-
-                {/* Popular Tag for First Service */}
-                {service.id === 0 && (
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      MOST POPULAR
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
+              image={service.image}
+              title={service.title}
+              description={service.description}
+              price={service.price}
+            />
           ))}
         </div>
       </div>
