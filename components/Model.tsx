@@ -13,6 +13,7 @@ import {
 type ModelProps = {
   isOpen: boolean;
   onClose: () => void;
+  email: string;
 };
 
 export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
@@ -28,6 +29,9 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+  // const email = "agent@rahilatravel.com";
+  const email = "mohamed.hass.dev@gmail.com";
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -98,12 +102,12 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
     `;
 
       // 🔹 Gmail APP (Android – best effort)
-      const gmailAppLink = `googlegmail://co?to=agent@rahilatravel.com.com&subject=${encodeURIComponent(
+      const gmailAppLink = `googlegmail://co?to=${email}.com&subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
       // 🔹 Gmail WEB (fallback)
-      const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=agent@rahilatravel.com.com&su=${encodeURIComponent(
+      const gmailWebLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.hass.dev@gmail.com.com&su=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
 
@@ -343,7 +347,7 @@ export const Model: React.FC<ModelProps> = ({ isOpen, onClose }) => {
             <p className="text-xs text-gray-500 text-center">
               We'll email you at{" "}
               <span className="text-blue-950 font-medium">
-                mankajr11@gmail.com
+                agent@rahilatravel.com
               </span>
             </p>
           </form>
