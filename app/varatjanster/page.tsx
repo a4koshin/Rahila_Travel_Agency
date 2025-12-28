@@ -1,5 +1,5 @@
 import React from "react";
-import { quickServices } from "@/lib/quickServices";
+import { services } from "@/lib/Services";
 import ServiceCard from "@/components/ServiceCard";
 
 const ServicePage = () => {
@@ -17,10 +17,10 @@ const ServicePage = () => {
 
       {/* Grid */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {quickServices.map((service) => (
+        {services.map((service) => (
           <ServiceCard
             key={service.id}
-            image={service.img}
+            image={service.image}
             title={service.title}
             description={service.description}
             price={service.price}
