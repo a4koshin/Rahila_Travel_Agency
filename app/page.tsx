@@ -67,6 +67,7 @@ const HomePage = () => {
       </div>
 
       {/* Quick Services Section */}
+
       <div className="py-16 px-4 md:px-8">
         {/* Heading */}
         <div className="flex flex-col text-center mb-12">
@@ -271,19 +272,27 @@ const HomePage = () => {
           <div className="bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-8 lg:p-12">
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-blue-950">5000+</div>
+                <div className="text-2xl lg:text-4xl font-bold text-blue-950">
+                  5000+
+                </div>
                 <div className="text-gray-600 mt-2">Visas Processed</div>
               </div>
               <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-amber-600">98%</div>
+                <div className="text-2xl lg:text-4xl font-bold text-amber-600">
+                  98%
+                </div>
                 <div className="text-gray-600 mt-2">Success Rate</div>
               </div>
               <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-blue-950">24/7</div>
+                <div className="text-2xl lg:text-4xl font-bold text-blue-950">
+                  24/7
+                </div>
                 <div className="text-gray-600 mt-2">Support Available</div>
               </div>
               <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-4xl font-bold text-amber-600">50+</div>
+                <div className="text-2xl lg:text-4xl font-bold text-amber-600">
+                  50+
+                </div>
                 <div className="text-gray-600 mt-2">Countries Covered</div>
               </div>
             </div>
@@ -301,6 +310,23 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* CTA section */}
+
+      <div className="py-16 px-4 md:px-8">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h1 className="font-bold text-4xl md:text-5xl text-blue-950 mb-3">
+            Get in touch
+          </h1>
+          <p className="font-medium text-lg text-amber-600">
+            Fast, reliable solutions for all your travel needs
+          </p>
+          <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
+        </div>
+
+        {/*  */}
       </div>
 
       {/* Render the Model component */}
