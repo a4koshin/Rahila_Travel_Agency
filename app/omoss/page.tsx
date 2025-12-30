@@ -85,7 +85,7 @@ const AboutPage = () => {
               <div className="p-3 bg-blue-950 rounded-xl">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Vårt uppdrag</h3>
+              <h3 className="text-2xl font-bold text-blue-950">Vårt uppdrag</h3>
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">
               Vårt uppdrag är enkelt: Att erbjuda sömlösa, inspirerande och
@@ -114,6 +114,8 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
+        {/* What we do */}
+        <div></div>
       </div>
     </>
   );
