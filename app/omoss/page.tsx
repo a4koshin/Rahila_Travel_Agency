@@ -44,15 +44,15 @@ const AboutPage = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
           <div className="lg:w-1/2">
             <h2 className="text-3xl font-bold text-blue-900 mb-6">
-              Vilka vi är
+              Din resa börjar här
             </h2>
             <div className="space-y-4 text-gray-700 text-lg">
               <p>
-                Rahila Travel är en pålitlig resepartner med lång erfarenhet av
-                att skapa personliga och genomtänkta reselösningar för resenärer
-                från alla bakgrunder. Vårt namn, inspirerat av äventyrets anda,
-                speglar vårt uppdrag: att vägleda våra kunder på meningsfulla
-                resor med integritet, professionalism och omtanke.
+                På Rahila Travel tror vi att varje resa berättar en historia –
+                och att varje resenär förtjänar oförglömliga upplevelser. Med en
+                passion för upptäcktslust och ett starkt engagemang för kvalitet
+                är vi en fullserviceresebyrå som förvandlar dina resedrömmar
+                till verklighet.
               </p>
             </div>
           </div>
