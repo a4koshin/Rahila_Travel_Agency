@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Target, Eye } from "lucide-react";
+import { whatWeDo } from "@/lib/whatWeDo";
 const AboutPage = () => {
   return (
     <>
@@ -114,8 +115,36 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        {/* What we do */}
-        <div></div>
+        {/* What we do - Minimal Card Design */}
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-blue-900 mb-6">
+              Vad vi gör
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whatWeDo.map((item) => (
+              <div
+                key={item.id}
+                className="group relative bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-950 to-blue-900 text-white text-2xl group-hover:from-amber-400 group-hover:to-amber-500 transition-all duration-300">
+                    {item.icon}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-bold text-blue-950 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-6">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
