@@ -131,7 +131,7 @@ const AboutPage = () => {
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-950 to-blue-900 text-white text-2xl group-hover:from-amber-400 group-hover:to-amber-500 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-950 text-white text-2xl hover:bg-amber-400 transition-all duration-300">
                     {item.icon}
                   </div>
                 </div>
@@ -144,6 +144,11 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
+          <p className="font-semibold text-blue-950  mt-6 bg-amber-50 px-8 py-8 rounded-2xl">
+            Vårt team av erfarna resekonsulter håller sig ständigt uppdaterade
+            om globala resetrender, destinationer och säkerhetsriktlinjer, så
+            att du kan resa tryggt och med full sinnesro.
+          </p>
         </div>
       </div>
     </>
