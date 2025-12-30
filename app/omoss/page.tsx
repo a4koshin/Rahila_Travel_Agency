@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Users, Target, Eye, Heart, Globe, Shield } from "lucide-react";
 const AboutPage = () => {
   return (
     <>
@@ -75,6 +76,42 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        {/* Mission and Vision */}
+        <div className="grid md:grid-cols-2 gap-8 mb-24">
+          <div className="group bg-white rounded-2xl p-8 transition-all duration-300 border border-blue-900/30 hover:border-blue-900/40">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-blue-950 rounded-xl">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Vårt uppdrag</h3>
+            </div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Vårt uppdrag är enkelt: Att erbjuda sömlösa, inspirerande och
+              skräddarsydda reseupplevelser som berikar livet och skapar
+              bestående minnen.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Oavsett om du planerar en unik upplevelse, en familjesemester, en
+              affärsresa eller en andlig pilgrimsfärd, utformar vi varje resa
+              med dina behov, önskemål och din budget i fokus.
+            </p>
+          </div>
+          {/* Vission */}
+          <div className="group bg-white rounded-2xl p-8 transition-all duration-300 border border-amber-200 hover:border-amber-300">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-3 bg-amber-400 rounded-xl">
+                <Eye className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-amber-500">Vår vision</h3>
+            </div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Att vara en ledande resebyrå som är erkänd för exceptionell
+              service, meningsfulla reseupplevelser och långsiktiga relationer
+              med våra kunder. Vi vill inspirera nyfikenhet, skapa möten och
+              öppna världen för alla vi arbetar med.
+            </p>
           </div>
         </div>
       </div>
