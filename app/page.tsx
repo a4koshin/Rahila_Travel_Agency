@@ -173,18 +173,29 @@ const HomePage = () => {
 
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-          {whyChooseRahilaTravel.map((item) => (
-            <div
-              key={item.id}
-              className="group relative bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
-            >
-              {/* Content */}
-              <h3 className="text-xl font-bold text-blue-950 mb-4">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 mb-6">{item.description}</p>
-            </div>
-          ))}
+          {whyChooseRahilaTravel.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.id}
+                className="group relative bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-400 text-white text-2xl transition-all duration-300">
+                    <Icon />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-bold text-blue-950 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-6">{item.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
