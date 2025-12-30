@@ -183,7 +183,7 @@ const HomePage = () => {
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-400 text-white text-2xl transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-400 text-blue-950 text-2xl transition-all duration-300">
                     <Icon />
                   </div>
                 </div>
