@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Users, Target, Eye, Heart, Globe, Shield } from "lucide-react";
+import { Target, Eye } from "lucide-react";
 const AboutPage = () => {
   return (
     <>
