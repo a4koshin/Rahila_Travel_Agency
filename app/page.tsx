@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import Image from "next/image";
 import { services } from "@/lib/Services";
 import ServiceCard from "@/components/ServiceCard";
@@ -8,6 +9,7 @@ import { whyChooseRahilaTravel } from "@/lib/choose";
 const HomePage = () => {
   // const [isOpen, setIsOpen] = useState(false);
   // const [isModelOpen, setIsModelOpen] = useState(false);
+  const [emailMessage, setEmailMessage] = useState<string>("");
   const router = useRouter();
 
   return (
@@ -202,18 +204,67 @@ const HomePage = () => {
       {/* CTA section */}
 
       <div className="py-16 px-4 md:px-8">
-        {/* Heading */}
-        <div className="text-center mb-12">
-          <h1 className="font-bold text-4xl md:text-5xl text-blue-950 mb-3">
-            Get in touch
-          </h1>
-          <p className="font-medium text-lg text-amber-600">
-            Fast, reliable solutions for all your travel needs
-          </p>
-          <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
-        </div>
+        <div className="text-center mb-24 bg-blue-950 px-4 md:px-8  py-16 rounded-2xl">
+          {/* Enhanced Header */}
+          <div className="inline-flex items-center gap-2 text-gray-100 mb-4">
+            <div className="w-8 h-0.5 bg-gray-100"></div>
+            <span className="text-sm font-semibold uppercase tracking-wider">
+              Kontakt oss
+            </span>
+            <div className="w-8 h-0.5 bg-gray-100"></div>
+          </div>
 
-        {/*  */}
+          {/* Heading */}
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-100 mb-4">
+            Vi er her for å hjelpe deg med din neste reise
+          </h2>
+
+          {/* Subtext */}
+          <p className="text-lg text-gray-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Ta kontakt med oss og bli en del av vårt reisefellesskap. Vi hjelper
+            deg med å planlegge en trygg, enkel og minneverdig reise – uansett
+            formål.
+          </p>
+
+          {/* Enhanced Input + Button Container */}
+          <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 max-w-lg mx-auto">
+            {/* Input Field */}
+            <div className="flex-1">
+              <input
+                type="text"
+                value={emailMessage}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setEmailMessage(e.target.value)
+                }
+                placeholder="skriv meldingen din"
+                className="w-full h-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-100 focus:outline-none focus:ring focus:ring-white focus:bg-white/20 transition-all duration-300 hover:bg-white/15"
+              />
+            </div>
+
+            {/* Button */}
+            <a
+              href={`mailto:agent@rahilatravel.com?subject=Message%20to%20from%20–%20the%20Your%20Website&body=${encodeURIComponent(
+                emailMessage
+              )}`}
+              className="inline-flex items-center justify-center px-8 py-3 bg-amber-400 text-white font-semibold rounded-lg shadow-lg hover:bg-amber-500 hover:scale-105 hover:shadow-xl transition-all duration-300 whitespace-nowrap min-w-[140px]"
+            >
+              Kontakt oss
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Render the Model component */}
