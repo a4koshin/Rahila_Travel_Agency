@@ -23,13 +23,7 @@ const AboutPage = () => {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
           <div className="relative mb-12 text-center">
             {/* Badge/Logo indicator */}
-            <div className="inline-flex items-center justify-center mb-6">
-              <div className="relative">
-                {/* <div className="relative bg-gradient-to-br from-amber-500 to-amber-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg -mt-12">
-                  Din resa börjar här
-                </div> */}
-              </div>
-            </div>
+            <div className="inline-flex items-center justify-center mb-6"></div>
 
             {/* Main heading */}
             <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-amber-400 bg-clip-text text-transparent tracking-tight">
