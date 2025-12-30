@@ -127,11 +127,11 @@ const AboutPage = () => {
             {whatWeDo.map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
+                className="group relative bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-950 text-white text-2xl hover:bg-amber-400 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-400 text-white text-2xl hover:bg-amber-400 transition-all duration-300">
                     {item.icon}
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
-          <p className="font-semibold text-blue-950  mt-6 bg-amber-50 px-8 py-8 rounded-2xl">
+          <p className="font-semibold text-blue-950  mt-6 bg-blue-50 px-8 py-8 rounded-2xl">
             Vårt team av erfarna resekonsulter håller sig ständigt uppdaterade
             om globala resetrender, destinationer och säkerhetsriktlinjer, så
             att du kan resa tryggt och med full sinnesro.
