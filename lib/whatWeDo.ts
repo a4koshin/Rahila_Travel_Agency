@@ -1,5 +1,5 @@
 interface WhatWeDo {
-  //   id: number;
+  id: number;
   icon: string;
   title: string;
   description: string;
@@ -7,31 +7,36 @@ interface WhatWeDo {
 
 export const whatWeDo: WhatWeDo[] = [
   {
+    id: 0,
     icon: "🌴",
-    title: "Tailor-Made Holiday Packages",
+    title: "Skräddarsydda semesterpaket",
     description:
-      "Beach getaways, cultural experiences, adventure trips, and much more personalized to your preferences",
+      "strandresor, kulturella upplevelser, äventyrsresor och mycket mer",
   },
   {
+    id: 1,
     icon: "✈️",
-    title: "Flight & Accommodation Bookings",
-    description:
-      "Competitive prices and smooth arrangements for all your travel needs",
+    title: "Flyg- och boendebokningar",
+    description: "konkurrenskraftiga priser och smidiga arrangemang",
   },
   {
+    id: 2,
     icon: "👥",
-    title: "Group & Corporate Travel",
-    description: "Efficient and reliable planning for teams and organizations",
-  },
-  {
-    icon: "📄",
-    title: "Visa Assistance & Documentation",
-    description: "Professional support that simplifies the entire process",
-  },
-  {
-    icon: "🕌",
-    title: "Specialized Travel",
+    title: "Gruppresor och företagsresor",
     description:
-      "Spiritual pilgrimages, luxury travel, and carefully curated itineraries",
+      "effektiv och tillförlitlig planering för team och organisationer",
+  },
+  {
+    id: 3,
+    icon: "📄",
+    title: "Visumhjälp och resedokumentation",
+    description: "professionellt stöd som förenklar processen",
+  },
+  {
+    id: 4,
+    icon: "🕌",
+    title: "Specialiserade resor",
+    description:
+      "andliga pilgrimsfärder, lyxresor och noggrant kurerade resplaner",
   },
 ];
