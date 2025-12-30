@@ -4,6 +4,7 @@ import Image from "next/image";
 import { services } from "@/lib/Services";
 import ServiceCard from "@/components/ServiceCard";
 import { useRouter } from "next/navigation";
+import { whyChooseRahilaTravel } from "@/lib/choose";
 const HomePage = () => {
   // const [isOpen, setIsOpen] = useState(false);
   // const [isModelOpen, setIsModelOpen] = useState(false);
@@ -172,89 +173,18 @@ const HomePage = () => {
 
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-          {/* Left Column */}
-          <div className="space-y-8">
-            <h2 className="font-bold text-3xl text-blue-950 mb-8">
-              Your Trusted Travel Partner
-            </h2>
-
-            {[
-              {
-                icon: "✓",
-                title: "Best Price Guarantee",
-                desc: "We promise the lowest fares for flights and visa services",
-              },
-              {
-                icon: "⚡",
-                title: "Fast Processing",
-                desc: "Quick visa approvals and instant flight ticket confirmation",
-              },
-              {
-                icon: "🛡️",
-                title: "100% Secure",
-                desc: "Your documents and payments are completely protected",
-              },
-              {
-                icon: "👨‍💼",
-                title: "Expert Support",
-                desc: "24/7 assistance from travel professionals",
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center">
-                  <span className="text-2xl">{item.icon}</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl text-blue-950 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column - Stats */}
-          <div className="bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-8 lg:p-12">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-2xl lg:text-4xl font-bold text-blue-950">
-                  5000+
-                </div>
-                <div className="text-gray-600 mt-2">Visas Processed</div>
-              </div>
-              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-2xl lg:text-4xl font-bold text-amber-600">
-                  98%
-                </div>
-                <div className="text-gray-600 mt-2">Success Rate</div>
-              </div>
-              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-2xl lg:text-4xl font-bold text-blue-950">
-                  24/7
-                </div>
-                <div className="text-gray-600 mt-2">Support Available</div>
-              </div>
-              <div className="text-center p-6 bg-white rounded-xl shadow-sm">
-                <div className="text-2xl lg:text-4xl font-bold text-amber-600">
-                  50+
-                </div>
-                <div className="text-gray-600 mt-2">Countries Covered</div>
-              </div>
+          {whyChooseRahilaTravel.map((item) => (
+            <div
+              key={item.id}
+              className="group relative bg-gradient-to-br from-white to-amber-50 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
+            >
+              {/* Content */}
+              <h3 className="text-xl font-bold text-blue-950 mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 mb-6">{item.description}</p>
             </div>
-
-            <div className="mt-8 p-6 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl text-center text-white">
-              <p className="text-md lg:text-xl font-semibold">
-                Ready to start your journey?
-              </p>
-              <button
-                onClick={() => router.push("/kontaktaoss")}
-                className="mt-4 bg-white text-amber-600 font-bold px-8 py-2 lg:px-6 lg:py-3 rounded-lg hover:bg-gray-100 hover-scale-105 transition"
-              >
-                <span className="text-sm">Get Free Consultation</span>
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
