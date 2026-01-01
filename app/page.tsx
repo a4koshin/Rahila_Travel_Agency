@@ -8,8 +8,6 @@ import { useRouter } from "next/navigation";
 import { whyChooseRahilaTravel } from "@/lib/choose";
 import Link from "next/link";
 const HomePage = () => {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [isModelOpen, setIsModelOpen] = useState(false);
   const [emailMessage, setEmailMessage] = useState<string>("");
   const router = useRouter();
 
@@ -20,24 +18,25 @@ const HomePage = () => {
         <div className="flex-1 w-full max-w-2xl text-center lg:text-left px-4 sm:px-6">
           {/* Headline */}
           <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-blue-950 mb-4 md:mb-6">
-            Building Dreams with{" "}
+            Your Journey{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 text-amber-500">Strength</span>
+              <span className="relative z-10 text-amber-500">Begins</span>
               <span className="absolute bottom-1.5 xs:bottom-2 left-0 w-full h-2 xs:h-3 bg-gradient-to-r from-amber-100 to-amber-50 -rotate-1 z-0"></span>
             </span>{" "}
-            and{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 text-blue-950">Precision</span>
+              <span className="relative z-10 text-blue-950">Here</span>
               <span className="absolute bottom-1.5 xs:bottom-2 left-0 w-full h-2 xs:h-3 bg-gradient-to-r from-blue-50 to-blue-100 -rotate-1 z-0"></span>
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Empowering builders with high-performance, durable equipment.
-            <span className="font-semibold text-[#1C427A]"> Caalami Group</span>
-            , we make construction smarter, stronger, and seamless — from vision
-            to reality.
+            <span className="font-semibold text-amber-600">
+              {" "}
+              At Rahila travel agency
+            </span>{" "}
+            Travel, we design personalized travel experiences with care,
+            expertise, and passion—so you can explore with confidence and ease.
           </p>
 
           {/* CTA Buttons */}
@@ -45,17 +44,17 @@ const HomePage = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#1C427A] hover:bg-[#15325F] text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full xs:w-auto justify-center"
+              className="bg-amber-500 hover:bg-amber-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full xs:w-auto justify-center"
             >
-              <Link href="/about">Explore Our Solutions</Link>
+              <Link href="/kontaktaoss">Book your trip ✈</Link>
             </Button>
 
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-[#E73535] text-[#E73535] hover:bg-[#E73535] hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-medium transition-all duration-300 w-full xs:w-auto justify-center"
+              className="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-medium transition-all duration-300 w-full xs:w-auto justify-center"
             >
-              Watch Video
+              Direct Contact 📞
             </Button>
           </div>
         </div>
