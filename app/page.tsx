@@ -6,6 +6,7 @@ import { services } from "@/lib/Services";
 import ServiceCard from "@/components/ServiceCard";
 import { useRouter } from "next/navigation";
 import { whyChooseRahilaTravel } from "@/lib/choose";
+import Link from "next/link";
 const HomePage = () => {
   // const [isOpen, setIsOpen] = useState(false);
   // const [isModelOpen, setIsModelOpen] = useState(false);
@@ -14,56 +15,66 @@ const HomePage = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-      <div className="grid grid-cols-1 gap-12 items-center">
-        {/* TEXT SECTION (TOP) */}
-        <div className="space-y-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold">
-            <span className="text-blue-950"> Flight Tickets </span> <br />
-            <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent ">
-              Visa Services You Can Trust
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-8">
+        {/* Left Content */}
+        <div className="flex-1 w-full max-w-2xl text-center lg:text-left px-4 sm:px-6">
+          {/* Headline */}
+          <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-blue-950 mb-4 md:mb-6">
+            Building Dreams with{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-amber-500">Strength</span>
+              <span className="absolute bottom-1.5 xs:bottom-2 left-0 w-full h-2 xs:h-3 bg-gradient-to-r from-amber-100 to-amber-50 -rotate-1 z-0"></span>
+            </span>{" "}
+            and{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-blue-950">Precision</span>
+              <span className="absolute bottom-1.5 xs:bottom-2 left-0 w-full h-2 xs:h-3 bg-gradient-to-r from-blue-50 to-blue-100 -rotate-1 z-0"></span>
             </span>
           </h1>
-        </div>
-        {/* IMAGE SECTION */}
-        <div className="relative flex justify-center items-center">
-          <div className="relative w-[900rem] max-w-6xl overflow-hidden rounded-[140px] aspect-[18/7]">
-            <Image
-              src="/hero4k.png"
-              alt="Beautiful travel destination"
-              fill
-              priority
-              className="object-contain"
-            />
+
+          {/* Description */}
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Empowering builders with high-performance, durable equipment.
+            <span className="font-semibold text-[#1C427A]"> Caalami Group</span>
+            , we make construction smarter, stronger, and seamless — from vision
+            to reality.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#1C427A] hover:bg-[#15325F] text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full xs:w-auto justify-center"
+            >
+              <Link href="/about">Explore Our Solutions</Link>
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-[#E73535] text-[#E73535] hover:bg-[#E73535] hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-medium transition-all duration-300 w-full xs:w-auto justify-center"
+            >
+              Watch Video
+            </Button>
           </div>
         </div>
 
-        {/* <div className="flex items-center justify-center gap-4 lg:-mt-22">
-          <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 rounded-xl shadow-lg hover:scale-105 transition-all">
-            Explore Destinations
-          </Button>
-
-          <Button
-            variant="outline"
-            className="border border-orange-200 text-amber-600 hover:bg-orange-50 px-8 py-6 rounded-xl hover:scale-105 transition-all"
-          >
-            Plan Your Trip
-          </Button>
-        </div> */}
-        <div className="w-full text-center ">
-          <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
-            <svg
-              className="w-4 h-4 text-green-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
+        {/* Enhanced Image Section */}
+        <div className="w-full lg:w-1/2 px-4 sm:px-6">
+          <div className="relative">
+            <div className="aspect-[4/3] sm:aspect-[3/3] relative">
+              <Image
+                src="/heroImage.png"
+                alt="Caalami Group construction project showcasing modern equipment and professional team"
+                width={800}
+                height={800}
+                priority
+                className="object-cover rounded-lg sm:rounded-xl transition-transform duration-700"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw"
               />
-            </svg>
-            Trusted by 10,000+ travelers worldwide
-          </p>
+            </div>
+          </div>
         </div>
       </div>
 
