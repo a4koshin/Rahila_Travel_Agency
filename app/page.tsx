@@ -19,25 +19,25 @@ const HomePage = () => {
         <div className="space-y-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold">
             <span className="text-blue-950"> Flight Tickets </span> <br />
-            <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent ">
               Visa Services You Can Trust
             </span>
           </h1>
         </div>
         {/* IMAGE SECTION */}
-        <div className="relative flex justify-center">
-          <div className="relative w-full max-w-7xl overflow-hidden rounded-[140px] aspect-[18/7]">
+        <div className="relative flex justify-center items-center">
+          <div className="relative w-[900rem] max-w-6xl overflow-hidden rounded-[140px] aspect-[18/7]">
             <Image
-              src="/hero22.png"
+              src="/hero4k.png"
               alt="Beautiful travel destination"
               fill
               priority
-              className="object-cover object-center"
+              className="object-contain"
             />
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-4 lg:-mt-22">
+        {/* <div className="flex items-center justify-center gap-4 lg:-mt-22">
           <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-6 rounded-xl shadow-lg hover:scale-105 transition-all">
             Explore Destinations
           </Button>
@@ -48,7 +48,7 @@ const HomePage = () => {
           >
             Plan Your Trip
           </Button>
-        </div>
+        </div> */}
         <div className="w-full text-center ">
           <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
             <svg
