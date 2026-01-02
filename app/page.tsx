@@ -44,12 +44,14 @@ const HomePage = () => {
               {" "}
               At Rahila travel agency
             </span>{" "}
-            Travel, we design personalized travel experiences with care,
-            expertise, and passion—so you can explore with confidence and ease.
+            we craft personalized travel experiences with precision, expertise,
+            and genuine passion—ensuring every journey is seamless, inspiring,
+            and tailored to your unique needs. Explore the world with
+            confidence, comfort, and peace of mind.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+          <div className="flex xs:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
             <Button
               asChild
               size="lg"
@@ -65,6 +67,18 @@ const HomePage = () => {
             >
               Talk to Our Expert 📞
             </Button>
+          </div>
+          {/* Features List */}
+          <div className="hidden sm:flex flex-wrap gap-3 mb-6 max-w-lg">
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">
+              ✓ Personalized Itineraries
+            </span>
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-sm">
+              ✓ 24/7 Support
+            </span>
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">
+              ✓ Best Price Guarantee
+            </span>
           </div>
         </div>
 
