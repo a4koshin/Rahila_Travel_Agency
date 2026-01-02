@@ -16,6 +16,9 @@ const HomePage = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-8">
         {/* Left Content */}
         <div className="flex-1 w-full max-w-2xl text-center lg:text-left px-4 sm:px-6">
+          <div className="w-40">
+            <Image src="/arrplane.png" alt="arrow" width={800} height={800} />
+          </div>
           {/* Headline */}
           <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-blue-950 mb-4 md:mb-6">
             Your Journey{" "}
@@ -62,9 +65,9 @@ const HomePage = () => {
         {/* Enhanced Image Section */}
         <div className="w-full lg:w-1/2 px-4 sm:px-6">
           <div className="relative">
-            <div className="aspect-[4/3] sm:aspect-[3/3] relative">
+            <div className="aspect-[2/3] sm:aspect-[4/3] relative">
               <Image
-                src="/heroImage.png"
+                src="/hero.png"
                 alt="Caalami Group construction project showcasing modern equipment and professional team"
                 width={800}
                 height={800}
