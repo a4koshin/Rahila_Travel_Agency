@@ -16,7 +16,7 @@ const HomePage = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-8">
         {/* Left Content */}
         <div className="flex-1 w-full max-w-2xl text-center lg:text-left px-4 sm:px-6">
-          <div className="w-40">
+          <div className="w-40 ml-45 lg:ml-82">
             <Image src="/arrplane.png" alt="arrow" width={800} height={800} />
           </div>
           {/* Headline */}
