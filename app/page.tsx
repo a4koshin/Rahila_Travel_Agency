@@ -16,12 +16,18 @@ const HomePage = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-8">
         {/* Left Content */}
         <div className="flex-1 w-full max-w-2xl text-center lg:text-left px-4 sm:px-6">
-          <div className="w-40 ml-45 lg:ml-82">
-            <Image src="/arrplane.png" alt="arrow" width={800} height={800} />
+          <div className="relative w-40 ml-45">
+            <Image
+              src="/arrplane.png"
+              alt="arrow"
+              width={800}
+              height={800}
+              className="lg:absolute lg:-mt-20 lg:ml-71"
+            />
           </div>
           {/* Headline */}
           <h1 className="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-blue-950 mb-4 md:mb-6">
-            Your Journey{" "}
+            Your <span className="text-amber-500">Journey</span>{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-amber-500">Begins</span>
               <span className="absolute bottom-1.5 xs:bottom-2 left-0 w-full h-2 xs:h-3 bg-gradient-to-r from-amber-100 to-amber-50 -rotate-1 z-0"></span>
@@ -57,25 +63,30 @@ const HomePage = () => {
               size="lg"
               className="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-medium transition-all duration-300 w-full xs:w-auto justify-center"
             >
-              Direct Contact 📞
+              Talk to Our Expert 📞
             </Button>
           </div>
         </div>
 
-        {/* Enhanced Image Section */}
-        <div className="w-full lg:w-1/2 px-4 sm:px-6">
-          <div className="relative">
-            <div className="aspect-[2/3] sm:aspect-[4/3] relative">
+        {/* Right Image - Better proportion control */}
+        <div className="w-full lg:w-1/2 xl:w-5/12">
+          <div className="relative group">
+            <div className="aspect-square lg:aspect-[3/4] xl:aspect-[4/5] relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl">
               <Image
                 src="/hero.png"
                 alt="Caalami Group construction project showcasing modern equipment and professional team"
-                width={800}
-                height={800}
+                fill
                 priority
-                className="object-cover rounded-lg sm:rounded-xl transition-transform duration-700"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 50vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              {/* Decorative gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/10 via-transparent to-transparent opacity-60"></div>
             </div>
+
+            {/* Floating decorative element */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-400/10 rounded-full blur-xl"></div>
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-400/10 rounded-full blur-xl"></div>
           </div>
         </div>
       </div>
