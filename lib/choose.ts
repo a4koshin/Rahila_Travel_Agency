@@ -12,29 +12,29 @@ export const whyChooseRahilaTravel: WhyChoose[] = [
   {
     id: 1,
     icon: FaUserCheck,
-    title: "Personlig service",
+    title: "Personal service",
     description:
-      "Varje resenär är unik – därför anpassar vi varje resa efter din stil, ditt schema och din budget.",
+      "Every traveler is unique – that's why we customize every trip to your style, schedule, and budget.",
   },
   {
     id: 2,
     icon: FaMapMarkedAlt,
-    title: "Expertkunskap",
+    title: "Expert knowledge",
     description:
-      "Med gedigen destinationskunskap och starka branschpartnerskap erbjuder vi välgrundade rekommendationer och hög kvalitet till rätt pris.",
+      "With solid destination knowledge and strong industry partnerships, we offer well-founded recommendations and high quality at the right price.",
   },
   {
     id: 3,
     icon: FaStar,
-    title: "Engagemang för kvalitet",
+    title: "Commitment to quality",
     description:
-      "Från första kontakt till dess att du är hemma igen strävar vi efter en smidig och stressfri reseupplevelse.",
+      "From first contact until you return home, we strive for a smooth and stress-free travel experience.",
   },
   {
     id: 4,
     icon: FaHeadset,
-    title: "Pålitlig support",
+    title: "Reliable support",
     description:
-      "Vår service slutar inte vid bokningen – vi finns med dig före, under och efter resan.",
+      "Our service doesn't end with the booking – we are with you before, during and after the trip.",
   },
 ];
