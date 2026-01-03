@@ -249,21 +249,21 @@ const HomePage = () => {
           <div className="inline-flex items-center gap-2 text-gray-100 mb-4">
             <div className="w-8 h-0.5 bg-gray-100"></div>
             <span className="text-sm font-semibold uppercase tracking-wider">
-              Kontakt oss
+              Contact us
             </span>
             <div className="w-8 h-0.5 bg-gray-100"></div>
           </div>
 
           {/* Heading */}
           <h2 className="text-2xl md:text-4xl font-bold text-gray-100 mb-4">
-            Vi er her for å hjelpe deg med din neste reise
+            We are here to help you with your next trip
           </h2>
 
           {/* Subtext */}
           <p className="text-lg text-gray-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Ta kontakt med oss og bli en del av vårt reisefellesskap. Vi hjelper
-            deg med å planlegge en trygg, enkel og minneverdig reise – uansett
-            formål.
+            Get in touch with us and become part of our travel community. We
+            help help you plan a safe, easy and memorable trip - no matter what
+            purpose.
           </p>
 
           {/* Enhanced Input + Button Container */}
@@ -276,7 +276,7 @@ const HomePage = () => {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setEmailMessage(e.target.value)
                 }
-                placeholder="skriv meldingen din"
+                placeholder="write your message"
                 className="w-full h-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-100 focus:outline-none focus:ring focus:ring-white focus:bg-white/20 transition-all duration-300 hover:bg-white/15"
               />
             </div>
@@ -288,7 +288,7 @@ const HomePage = () => {
               )}`}
               className="inline-flex items-center justify-center px-8 py-3 bg-amber-400 text-white font-semibold rounded-lg shadow-lg hover:bg-amber-500 hover:scale-105 hover:shadow-xl transition-all duration-300 whitespace-nowrap min-w-[140px]"
             >
-              Kontakt oss
+              Contact us
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
