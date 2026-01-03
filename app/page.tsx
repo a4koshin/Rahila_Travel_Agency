@@ -164,7 +164,7 @@ const HomePage = () => {
                 className="group bg-amber-400 text-white px-8 py-6 rounded-xl text-lg font-semibold hover:bg-amber-500 hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
-                  Lär dig mer om oss →
+                  learn more about us →
                 </span>
               </Button>
             </div>
