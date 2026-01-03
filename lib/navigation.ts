@@ -17,8 +17,8 @@ export const navbar: Navbar[] = [
   },
   {
     id: 2,
-    name: "Våra tjänster",
-    href: "/varatjanster",
+    name: "Our Services",
+    href: "/ourservice",
   },
   {
     id: 3,
