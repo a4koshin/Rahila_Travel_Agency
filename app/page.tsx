@@ -57,7 +57,9 @@ const HomePage = () => {
               size="lg"
               className="bg-amber-500 hover:bg-amber-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full xs:w-auto justify-center"
             >
-              <Link href="/kontaktaoss">Book your trip ✈</Link>
+              <Link href="/kontaktaoss">
+                Book your trip <span className="animate">✈</span>
+              </Link>
             </Button>
 
             <Button
@@ -110,10 +112,10 @@ const HomePage = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <h1 className="font-bold text-3xl md:text-4xl text-blue-950 mb-4">
-            Din resa
+            Your journey
           </h1>
           <p className="font-medium text-md text-amber-600 max-w-2xl mx-auto">
-            Vi hjälper dig att resa tryggt och enkelt, från början till slut.
+            We help you travel safely and easily, from start to finish.
           </p>
           <div className="mt-6 mx-auto w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
         </div>
@@ -140,18 +142,18 @@ const HomePage = () => {
           {/* Text Section */}
           <div className="lg:w-1/2 space-y-6">
             <h2 className="text-3xl font-bold text-blue-950">
-              Din resa börjar här
+              Your journey starts here
             </h2>
 
             <div className="space-y-4 text-gray-700">
               <p className="text-lg leading-relaxed">
-                På Rahila Travel tror vi att varje resa berättar en historia –
-                och att varje resenär förtjänar oförglömliga upplevelser.
+                At Rahila Travel, we believe that every journey tells a story –
+                and that every traveler deserves unforgettable experiences.
               </p>
               <p className="text-lg leading-relaxed">
-                Med en passion för upptäcktslust och ett starkt engagemang för
-                kvalitet är vi en fullserviceresebyrå som förvandlar dina
-                resedrömmar till verklighet.
+                With a passion for discovery and a strong commitment to quality,
+                we are a full-service travel agency that turns your travel
+                dreams into reality.
               </p>
             </div>
 
