@@ -96,8 +96,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Right Image - Better proportion control */}
-        <div className="w-full lg:w-1/2 xl:w-5/12">
+        <div className="w-full lg:w-5/12 xl:w-1/3 max-w-lg mx-auto">
           <div className="relative group">
             <div className="aspect-square lg:aspect-[3/4] xl:aspect-[4/5] relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl">
               <Image
@@ -106,15 +105,13 @@ const HomePage = () => {
                 fill
                 priority
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
-              {/* Decorative gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/10 via-transparent to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/10 via-transparent to-transparent opacity-60" />
             </div>
 
-            {/* Floating decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-400/10 rounded-full blur-xl"></div>
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-400/10 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-400/10 rounded-full blur-xl" />
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-blue-400/10 rounded-full blur-xl" />
           </div>
         </div>
       </div>
