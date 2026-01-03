@@ -27,7 +27,7 @@ const ServicePage = () => {
 
             {/* Main heading */}
             <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-amber-400 bg-clip-text text-transparent tracking-tight">
-              Våra tjänster
+              Our services
             </h1>
           </div>
         </div>
