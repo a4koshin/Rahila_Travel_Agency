@@ -7,13 +7,13 @@ interface Navbar {
 export const navbar: Navbar[] = [
   {
     id: 0,
-    name: "Hem",
+    name: "Home",
     href: "/",
   },
   {
     id: 1,
-    name: "Om oss",
-    href: "/omoss",
+    name: "About Us",
+    href: "/aboutus",
   },
   {
     id: 2,
