@@ -22,7 +22,7 @@ export const navbar: Navbar[] = [
   },
   {
     id: 3,
-    name: " Kontakta oss",
-    href: "/kontaktaoss",
+    name: "Contact Us",
+    href: "/contact",
   },
 ];
