@@ -13,7 +13,7 @@ export const navbar: Navbar[] = [
   {
     id: 1,
     name: "About Us",
-    href: "/aboutus",
+    href: "/about",
   },
   {
     id: 2,
