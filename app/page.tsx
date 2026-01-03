@@ -54,8 +54,14 @@ const HomePage = () => {
           <div className="flex xs:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
             <Button
               asChild
-              size="lg"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 w-full xs:w-auto justify-center"
+              className="bg-amber-500 hover:bg-amber-600 text-white
+             px-2 sm:px-4
+             py-6 sm:py-6
+             text-lg sm:text-sm
+             font-semibold
+             shadow-lg hover:shadow-xl
+             transition-all duration-300
+             "
             >
               <Link href="/kontaktaoss">
                 Book your trip <span className="animate">✈</span>
@@ -64,10 +70,16 @@ const HomePage = () => {
 
             <Button
               variant="outline"
-              size="lg"
-              className="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-medium transition-all duration-300 w-full xs:w-auto justify-center"
+              className="border-2 border-amber-500 text-amber-500
+             hover:bg-amber-500 hover:text-white
+             px-2 sm:px-2
+             py-6 sm:py-6
+             text-lg sm:text-sm
+             font-medium
+             transition-all duration-300
+            "
             >
-              Talk to Our Expert 📞
+              Talk to Our Expert
             </Button>
           </div>
           {/* Features List */}
