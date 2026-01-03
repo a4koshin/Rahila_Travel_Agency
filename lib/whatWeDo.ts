@@ -9,34 +9,33 @@ export const whatWeDo: WhatWeDo[] = [
   {
     id: 0,
     icon: "🌴",
-    title: "Skräddarsydda semesterpaket",
+    title: "Tailor-made holiday packages",
     description:
-      "strandresor, kulturella upplevelser, äventyrsresor och mycket mer",
+      "Beach trips, cultural experiences, adventure trips and much more",
   },
   {
     id: 1,
     icon: "✈️",
-    title: "Flyg- och boendebokningar",
-    description: "konkurrenskraftiga priser och smidiga arrangemang",
+    title: "Flight and accommodation bookings",
+    description: "competitive prices and smooth arrangements",
   },
   {
     id: 2,
     icon: "👥",
-    title: "Gruppresor och företagsresor",
-    description:
-      "effektiv och tillförlitlig planering för team och organisationer",
+    title: "Group and corporate travel",
+    description: "efficient and reliable planning for teams and organizations",
   },
   {
     id: 3,
     icon: "📄",
-    title: "Visumhjälp och resedokumentation",
-    description: "professionellt stöd som förenklar processen",
+    title: "Visa assistance and travel documentation",
+    description: "professional support that simplifies the process",
   },
   {
     id: 4,
     icon: "🕌",
-    title: "Specialiserade resor",
+    title: "Specialized trips",
     description:
-      "andliga pilgrimsfärder, lyxresor och noggrant kurerade resplaner",
+      "spiritual pilgrimages, luxury travel and carefully curated itineraries",
   },
 ];
