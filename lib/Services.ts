@@ -9,7 +9,7 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 1,
-    image: "/paris.jpeg",
+    image: "/planing.png",
     title: "Travel Planning & Booking",
     description:
       "Professional and tailored travel planning and booking services for individuals and companies, ensuring safe and efficient journeys.",
@@ -33,7 +33,7 @@ export const services: Service[] = [
   },
   {
     id: 4,
-    image: "/dubia.jpeg",
+    image: "/support.png",
     title: "Travel Support & Assistance",
     description:
       "Fast and accessible customer support before, during, and after travel to ensure a seamless experience.",
