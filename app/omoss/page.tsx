@@ -27,7 +27,7 @@ const AboutPage = () => {
 
             {/* Main heading */}
             <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl mb-6 bg-amber-400 bg-clip-text text-transparent tracking-tight">
-              Vår historia
+              Our History
             </h1>
           </div>
         </div>
@@ -38,15 +38,15 @@ const AboutPage = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
           <div className="lg:w-1/2">
             <h2 className="text-3xl font-bold text-blue-900 mb-6">
-              Din resa börjar här
+              Your journey starts here
             </h2>
             <div className="space-y-4 text-gray-700 text-lg">
               <p>
-                På Rahila Travel tror vi att varje resa berättar en historia –
-                och att varje resenär förtjänar oförglömliga upplevelser. Med en
-                passion för upptäcktslust och ett starkt engagemang för kvalitet
-                är vi en fullserviceresebyrå som förvandlar dina resedrömmar
-                till verklighet.
+                At Rahila Travel, we believe that every journey tells a story –
+                and that every traveler deserves unforgettable experiences. With
+                a passion for discovery and a strong commitment to quality we
+                are a full-service travel agency that turns your travel dreams
+                into reality.
               </p>
             </div>
           </div>
@@ -77,17 +77,16 @@ const AboutPage = () => {
               <div className="p-3 bg-blue-950 rounded-xl">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-950">Vårt uppdrag</h3>
+              <h3 className="text-2xl font-bold text-blue-950">Our mission</h3>
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Vårt uppdrag är enkelt: Att erbjuda sömlösa, inspirerande och
-              skräddarsydda reseupplevelser som berikar livet och skapar
-              bestående minnen.
+              Our mission is simple: To offer seamless, inspiring and tailored
+              travel experiences that enrich lives and create lasting memories.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Oavsett om du planerar en unik upplevelse, en familjesemester, en
-              affärsresa eller en andlig pilgrimsfärd, utformar vi varje resa
-              med dina behov, önskemål och din budget i fokus.
+              Whether you are planning a unique experience, a family vacation, a
+              business trip or a spiritual pilgrimage, we design each trip with
+              your needs, desires and budget in mind.
             </p>
           </div>
           {/* Vission */}
@@ -96,13 +95,13 @@ const AboutPage = () => {
               <div className="p-3 bg-amber-400 rounded-xl">
                 <Eye className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-amber-500">Vår vision</h3>
+              <h3 className="text-2xl font-bold text-amber-500">Our vision</h3>
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Att vara en ledande resebyrå som är erkänd för exceptionell
-              service, meningsfulla reseupplevelser och långsiktiga relationer
-              med våra kunder. Vi vill inspirera nyfikenhet, skapa möten och
-              öppna världen för alla vi arbetar med.
+              To be a leading travel agency recognized for exceptional service,
+              meaningful travel experiences and long-term relationships with our
+              clients. We want to inspire curiosity, create encounters and open
+              the world to everyone we work with.
             </p>
           </div>
         </div>
