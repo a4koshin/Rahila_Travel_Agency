@@ -109,7 +109,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-blue-900 mb-6">
-              Vad vi gör
+              What we do
             </h2>
           </div>
 
@@ -135,9 +135,9 @@ const AboutPage = () => {
             ))}
           </div>
           <p className="font-semibold text-blue-950  mt-6 bg-blue-50 px-8 py-8 rounded-2xl">
-            Vårt team av erfarna resekonsulter håller sig ständigt uppdaterade
-            om globala resetrender, destinationer och säkerhetsriktlinjer, så
-            att du kan resa tryggt och med full sinnesro.
+            Our team of experienced travel consultants constantly stay up to
+            date on global travel trends, destinations and safety guidelines, so
+            you can travel safely and with complete peace of mind.
           </p>
         </div>
       </div>
